@@ -1,0 +1,21 @@
+{
+  "name": "ikkishaka",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jpramirezpra/ikkishaka",
+  "authors": [
+    "Jose Ramirez <jp.ramirezpra@gmail.com>"
+  ],
+  "description": "Shaka the man closest to God,  Ikki the man closest to Death",
+  "main": "public/",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "~1.11.4"
+  }
+}

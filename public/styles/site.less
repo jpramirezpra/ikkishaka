@@ -17,6 +17,7 @@
 // use in your site stylesheets.
 
 @import "site/variables.less";
+@import "site/mixins.less";
 
 
 // Site Styles
@@ -24,3 +25,90 @@
 
 // Add your own site style includes here
 @import "site/layout.less";
+
+@import url(http://fonts.googleapis.com/css?family=Poiret+One|Open+Sans:300italic,600italic,300,600);
+
+html{
+  background-color: @black;
+}
+
+body{
+  background-color: transparent;
+  font-family: "Open Sans";
+  font-size: @font-size-base;
+}
+
+h1,h2,h3,h4,h5,h6{ font-family: "Poiret One"; }
+
+div.errorPage{
+  background: transparent;
+  color:@white;
+  width:100%;
+  text-align:center;
+  align:center;
+
+  img{
+    max-width:10em;
+    padding-top: 2em;
+  }
+
+  ul{
+    padding:0px;
+
+    li{
+      list-style:none;
+      display: inline-block;
+      width: 45px;
+
+      //Must be an even number
+      @circleBase: 40;
+
+      a{
+        position:relative;
+        background: @gray;
+        display:inline-block;
+        width: 2em;
+        height: 2em;
+        .border-radius(1em);
+        color:@black;
+        cursor:pointer;
+        overflow:hidden;
+
+        &.git:hover{
+          background: @git;
+        }
+
+        &.face:hover{
+          background: @facebook;
+        }
+
+        &.twitter:hover{
+          background: @twitter;
+        }
+
+        &.linked:hover{
+          background: @linkedin;
+        }
+
+        i{
+          position:absolute;
+          left:0px;
+          right:0px;
+          top:10%;
+          font-size:1.5em;
+
+          &:hover{
+            .animation(bounce, 300ms, 200ms,ease-in);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@-webkit-keyframes bounce{
+  0%  {-webkit-transform: rotate(10deg)}
+  50% {-webkit-transform: rotate(-20deg)}
+  100% {-webkit-transform: rotate(10deg)}
+}
