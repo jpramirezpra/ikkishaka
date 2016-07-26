@@ -1,0 +1,7 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+@headerFont        : 'Poiret One', Arial, Helvetica, sans-serif;
+@pageFont          : 'Open Sans', Arial, Helvetica, sans-serif;
+@googleFontFamily  : 'Poiret+One|Open+Sans:300italic,600italic,300,600';

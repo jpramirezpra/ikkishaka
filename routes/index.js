@@ -6,6 +6,10 @@ var keystone = require('keystone'),
 keystone.pre('routes', middleware.initLocals);
 keystone.pre('render', middleware.flashMessages);
 
+keystone.set('404', function (req, res, next) {
+	res.status(404).render('errors/404');
+});
+
 // Import Route Controllers
 var routes = {
 	views: importRoutes('./views')
@@ -13,14 +17,15 @@ var routes = {
 
 // Setup Route Bindings
 exports = module.exports = function(app) {
-	//UnderConstruction
-	app.get('/*', routes.views.error);
+	//Index
+	app.get('/', routes.views.index);
 
 	// Views
-	app.get('/', routes.views.index);
-	app.get('/blog/:category?', routes.views.blog);
-	app.get('/blog/post/:post', routes.views.post);
-	app.get('/gallery', routes.views.gallery);
 	app.all('/contact', routes.views.contact);
 
+	//Projects
+	//app.all('/projects', routes.views.project);
+
+	//Blog
+	//app.all('/blog',routes.views.blog);
 };

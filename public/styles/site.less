@@ -1,21 +1,3 @@
-// Bootstrap
-// =========
-
-// You can include less bootstrap components if you like by
-// importing the .less files you want directly, instead of
-// the main bootstrap/bootstrap.less file.
-//
-// Bootstrap can be removed entirely by deleting this line.
-
-@import "bootstrap/bootstrap.less";
-
-// The easiest way to customise Bootstrap variables while
-// being able to easily override the source files with new
-// versions is to override the ones you want in another file.
-//
-// You can also add your own custom variables to this file for
-// use in your site stylesheets.
-
 @import "site/variables.less";
 @import "site/mixins.less";
 
@@ -29,17 +11,256 @@
 @import url(http://fonts.googleapis.com/css?family=Poiret+One|Open+Sans:300italic,600italic,300,600);
 
 html{
-  background-color: @black;
+  background-color: @gray;
 }
 
 body{
   background-color: transparent;
-  font-family: "Open Sans";
+  font-family: "Open Sans" !important;
   font-size: @font-size-base;
 }
 
-h1,h2,h3,h4,h5,h6{ font-family: "Poiret One"; }
+h1,h2,h3{ font-family: "Poiret One" !important; }
 
+h1.ui.header, h1{ font-weight: 100; }
+
+a{
+    color: @bluegreen;
+}
+
+.ui.modal{
+  background-color: @black;
+
+  .content{
+    background-color: @black;
+  }
+
+  .actions{
+    background-color: @black;
+
+    div.button:hover{
+      background-color: @clay;
+      color:@gray;
+    }
+  }
+
+  .ui.header{
+    color:@white !important;
+  }
+}
+
+/*************/
+/*HomePage*/
+/*************/
+
+/**
+#body{
+  background: url("../images/jprpPattern.png") 10% repeat!important;
+}
+**/
+
+.masthead.segment{
+  .ui.container{
+    margin-top: 10em;
+    
+    .ui.text.shape h1, h2{
+      font-size: 2em;
+      color:@gray;
+      margin-top:0;
+    }
+
+    .item{
+      width:300px;
+      margin:auto;
+    }
+  }
+
+  min-height: 700px;
+  background: url("../images/background.jpg") 100% !important;
+
+  animation: animateBackground 40s linear infinite;
+}
+
+#callout{
+  background-color: @black;
+  padding-top:2em;
+  padding-bottom:2em;
+  border-top:.1em solid @gray;
+  margin-bottom: 5em;
+  
+  & .ui.header{
+    line-height: 2em;
+    color:@gray;
+  }
+
+  b:nth-child(1){
+    color:@bluegreen !important;
+  }
+
+   b:nth-child(2){
+    color:@lightBlue !important;
+  }
+
+   b:nth-child(3){
+    color:@clay !important;
+  }
+}
+
+#speak, #play, #tech{
+  border-top: .1em solid @gray;
+  border-bottom: .1em solid @gray;
+  padding-top:1em;
+  padding-bottom:1em;
+  & .ui.header{
+    color:@bluegreen!important;
+  }
+}
+
+#need{
+ background-color: @clay;
+ padding-bottom:.1em;
+ min-height: 6em;
+
+ .ui.icon.header .icon{
+  display:inline;
+  font-size: 2em;
+ }
+
+ .ui.basic.segment{
+  padding-left:0;
+  padding-right:0;
+ }
+
+ .side div{
+  color:@black;
+  font-size: 2em;
+  line-height: 1.6em;
+ }
+
+ .side p{
+  color:@black;
+  font-size: 1.2em;
+ }
+}
+
+#contact{
+
+  padding-top: 3em;
+  background-color: @black;
+
+  color:@gray-lighter;
+
+  .ui.header{
+    color:@gray-lighter;
+  }
+
+  .ui.segment{
+    padding-right: 0;
+    padding-top:0;
+    padding-left:0;
+  }
+
+  .ui.basic.segment.loc{
+    margin-bottom: 0;
+    padding-bottom:.2em;
+  }
+
+  form .field label{
+    color:@gray-lighter;
+    font-weight: 100;
+    font-size: 1.2em;
+  }
+
+  form .field{
+    color:@black;
+  }
+
+  form .field.error{
+    input, select, textarea{
+      border-color: @fireOrange;
+      background:@fireOrange + #999;
+    }
+  }
+
+  iframe{
+    margin-top: .1em;
+  }
+
+  .ui.container .ui.grid{
+    padding-top: 0;
+    padding-bottom: 2em;
+  }
+
+  .ui.basic.segment a{
+    display:block;
+    font-size: 1.3em;
+    margin-top: .5em;
+
+    &:hover{
+      color:@white;
+    }
+  }
+
+}
+
+#content{
+  background-color: @gray-lighter;
+
+  .list-container{
+    max-width: 40em;
+    margin:auto;
+  }
+
+  h3.ui.center.aligned.image.header{
+    font-family: "Open Sans" !important;
+    font-weight: 400;
+    color:@black;
+  }
+
+  .play-grid{
+    .ui.image{
+      max-width:6em;
+      margin:auto;
+    }
+  }
+
+  .ui.stackable.grid {
+    padding-bottom:5em;
+    padding-top: 5em;
+
+    &:first-child{
+      margin-top:0;
+    }
+    .ui.circular.image{
+      margin:auto;
+    } 
+  }
+
+  .list-container{
+    margin-top:5em;
+    margin-bottom:5em;
+    padding-left:1em;
+    padding-right: 1em;
+  }
+
+  .ui.star.rating .active.icon{
+    color: @fireOrange !important;
+    text-shadow:none !important;
+  }
+
+}
+
+h4.ui.header.about { 
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 1.7em;
+  margin-top:2em;
+  margin-bottom: 2em;
+}
+
+/*************/
+/*Error Page*/
+/*************/
 div.errorPage{
   background: transparent;
   color:@white;
@@ -106,9 +327,13 @@ div.errorPage{
   }
 }
 
+@-webkit-keyframes animateBackground{
+  to { background-position-x: 100%; background-position-y: 40%;  }
+  from { background-position-x: 20%; background-position-y: 80%;   }
+}
 
-@-webkit-keyframes bounce{
-  0%  {-webkit-transform: rotate(10deg)}
-  50% {-webkit-transform: rotate(-20deg)}
-  100% {-webkit-transform: rotate(10deg)}
+@-webkit-keyframes jounce{
+  0%  {-webkit-transform: rotate(5deg)}
+  50% {-webkit-transform: rotate(-10deg)}
+  100% {-webkit-transform: rotate(5deg)}
 }

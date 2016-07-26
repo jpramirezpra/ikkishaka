@@ -1,21 +1,473 @@
+<div class="ui masthead vertical center aligned segment" id="welcomeBanner">
+	<div class="ui text container">
+		<div class="item">
+			<div class="ui rotate reveal">
+			  <div class="visible content">
+			    <img class="ui medium circular image" src="/images/me2.jpg">
+			  </div>
+			  <div class="hidden content">
+			    <div class="ui rotate left reveal">
+				  <div class="visible content">
+				    <img class="ui medium circular image" src="/images/me.jpg">
+				  </div>
+				  <div class="hidden content">
+				    <img class="ui medium circular image" src="/images/me3.jpg">
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		
+		<div class="ui text shape">
+			<div class="sides">
+				<h1 class="ui header side active">Hello! I'm Jose Pablo</h1>
+				<h1 class="ui header side">Hola! Yo soy Jose Pablo</h1>
+				<h1 class="ui header side">Oi! Eu sou Jose Pablo</h1>
+			</div>
+		</div>
 
-<div class="container">
-	<div class="jumbotron"><img src="/images/logo.svg" width="160">
-		<h1>Welcome</h1>
-		<p>This is your new <a href='http://keystonejs.com', target='_blank'>KeystoneJS</a> website.</p>
-		<p>
-			It includes the latest versions of
-			<a href='http://getbootstrap.com/' target='_blank'>Bootstrap</a>
-			and <a href='http://www.jquery.com/' target='_blank'>jQuery</a>.
-		</p>
-		<p>Visit the <a href='http://keystonejs.com/guide' target='_blank'>Getting Started</a> guide to learn how to customise it.</p>
-		<hr>
-		<p>We have created a default Admin user for you with the email <strong>jp.ramirezpra@gmail.com</strong> and the password <strong>JavaScript10</strong>.</p>
-		<p><a href="/keystone/signin" style="margin-right: 10px" class="btn btn-lg btn-primary">Sign in</a> to use the Admin UI.</p>
-		<hr>
-		<p>
-			Remember to <a href='https://github.com/keystonejs/keystone' target='_blank'>Star KeystoneJS on GitHub</a> and
-			<a href='https://twitter.com/keystonejs' target='_blank'>follow @keystonejs</a> on twitter for updates.
-		</p>
+		<h2 class="ui header side">I love music, technology, and nature</h2>
+<!-- 		<div class="ui text shape">
+			<div class="sides">
+				<h2 class="ui header side active">I love music, technology, and nature</h2>
+				<h2 class="ui header side">Yo amo la m&uacute;sica, la tecnolog&iacute;a, y la naturaleza</h2>
+				<h2 class="ui header side">Eu amo a m&uacute;sica, technologia e a natureza</h2>
+			</div>
+		</div> -->
+
+
 	</div>
+</div>
+{{#if enquirySubmitted}}
+	<div class="ui modal">
+		<div class="content">
+			<h2 class="ui icon header">
+  			  <i class="thumbs outline up icon"></i>
+			  <div class="content">
+			    Thank you for reaching out to me, looking forward to connecting!
+			  </div>
+			</h2>
+		</div>
+		<div class="actions">
+			<div class="ui center align approve button">Awesome!</div>
+		</div>
+	</div>
+{{/if}}
+
+{{#if errors }}
+	<div class="ui modal">
+		<div class="content">
+			<h2 class="ui icon center aligned header">
+  			  <i class="frown icon"></i>
+			  <div class="content">
+			    Looks like we found some issues with your form:
+			  </div>
+			</h2>
+		</div>
+		<div class="actions">
+			<div class="ui approve button">Let me fix it!</div>
+		</div>
+	</div>
+{{/if}}
+
+<div id="content">
+	<section id="callout">
+		<div class="ui container">
+			<div class="ui center aligned basic segment gray">
+				<h4 class="ui center aligned header about">
+					I am a <b>web+app developer</b>, <b>teacher</b>, and <b>musician</b>. I enjoy solving problems, taking the time to explain, and playing good music on my guitar. I believe a healthy mind needs a healthy body and I strive to turn complicated into simple.
+				</h4>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div id="tech" class="ui container">
+			<h1 class="ui header center aligned header">
+				I Use...
+			</h1>
+		</div>
+		<div class="list-container">
+		  <div class="ui middle aligned divided list">
+				<div class="item">
+					<div class="right floated content">
+						<div class="ui star rating" data-max-rating="5" data-rating="5"></div>
+					</div>
+					<img class="ui avatar image" src="/images/tech/js.png">
+					<div class="content">
+						JavaScript
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="right floated content">
+						<div class="ui star rating" data-max-rating="5" data-rating="5"></div>
+					</div>
+					<img class="ui avatar image" src="/images/tech/vs.png">
+					<div class="content">
+						C#
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="right floated content">
+						<div class="ui star rating" data-max-rating="5" data-rating="5"></div>
+					</div>
+					<img class="ui avatar image" src="/images/tech/mvc.png">
+					<div class="content">
+						ASP.NET MVC
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="right floated content">
+						<div class="ui star rating" data-max-rating="5" data-rating="5"></div>
+					</div>
+					<img class="ui avatar image" src="/images/tech/msql.png">
+					<div class="content">
+						MS SQL
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="right floated content">
+						<div class="ui star rating" data-max-rating="5" data-rating="4"></div>
+					</div>
+					<img class="ui avatar image" src="/images/tech/less.png">
+					<div class="content">
+						Less
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="right floated content">
+						<div class="ui star rating" data-max-rating="5" data-rating="4"></div>
+					</div>
+					<img class="ui avatar image" src="/images/tech/njs.png">
+					<div class="content">
+						Node.js
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="right floated content">
+						<div class="ui star rating" data-max-rating="5" data-rating="4"></div>
+					</div>
+					<img class="ui avatar image" src="/images/tech/ang.png">
+					<div class="content">
+						Angular
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="right floated content">
+						<div class="ui star rating" data-max-rating="5" data-rating="4"></div>
+					</div>
+					<img class="ui avatar image" src="/images/tech/inc.png">
+					<div class="content">
+						Ionic
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="right floated content">
+						<div class="ui star rating" data-max-rating="5" data-rating="4"></div>
+					</div>
+					<img class="ui avatar image" src="/images/tech/wa.png">
+					<div class="content">
+						Windows Azure
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="right floated content">
+						<div class="ui star rating" data-max-rating="5" data-rating="4"></div>
+					</div>
+					<img class="ui avatar image" src="/images/tech/ail.png">
+					<div class="content">
+						Adobe Illustrator
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="right floated content">
+						<div class="ui star rating" data-max-rating="5" data-rating="3"></div>
+					</div>
+					<img class="ui avatar image" src="/images/tech/mdb.png">
+					<div class="content">
+						Mongo DB
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="right floated content">
+						<div class="ui star rating" data-max-rating="5" data-rating="3"></div>
+					</div>
+					<img class="ui avatar image" src="/images/tech/gthb.png">
+					<div class="content">
+						Github
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="right floated content">
+						<div class="ui star rating" data-max-rating="5" data-rating="3"></div>
+					</div>
+					<img class="ui avatar image" src="/images/tech/grt.png">
+					<div class="content">
+						Grunt
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="right floated content">
+						<div class="ui star rating" data-max-rating="5" data-rating="3"></div>
+					</div>
+					<img class="ui avatar image" src="/images/tech/wp.png">
+					<div class="content">
+						WordPress
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="right floated content">
+						<div class="ui star rating" data-max-rating="5" data-rating="3"></div>
+					</div>
+					<img class="ui avatar image" src="/images/tech/do.png">
+					<div class="content">
+						Linux/Unix Virtual Servers
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="right floated content">
+						<div class="ui star rating" data-max-rating="5" data-rating="2"></div>
+					</div>
+					<img class="ui avatar image" src="/images/tech/rct.svg">
+					<div class="content">
+						React
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section>
+		<div id="play" class="ui container">
+			<h1 class="ui center aligned header row">
+				I Play...
+			</h1>
+		</div>
+
+		<div class="ui container">
+			<div class="ui stackable four column centered grid play-grid">
+				<div class="row">
+					<div class="column">
+						<img src="images/play/gtr.jpg" class="ui small circular image">
+					  	<h3 class="ui center aligned image header">
+							Guitar
+						</h3>
+					</div>
+					<div class="column">
+						<img src="images/play/uke.gif" class="ui small circular image">
+					  	<h3 class="ui center aligned image header">
+							Ukulele
+						</h3>
+					</div>
+					<div class="column">
+						<img src="images/play/pastinha.jpg" class="ui small circular image">
+					  	<h3 class="ui center aligned image header">
+							Berimbau
+						</h3>
+					</div>
+					<div class="column">
+						<img src="images/play/pandeiro.jpg" class="ui small circular image">
+					  	<h3 class="ui center aligned image header">
+							Pandeiro
+						</h3>
+					</div>
+					<div class="column">
+						<img src="images/play/cap.jpg" class="ui small circular image">
+					  	<h3 class="ui center aligned image header">
+							Capoeira
+						</h3>
+					</div>
+					<div class="column">
+						<img src="images/play/dinho.jpg" class="ui small circular image">
+					  	<h3 class="ui center aligned image header">
+							Futbol
+						</h3>
+					</div>
+					<div class="column">
+						<img src="images/play/dream.jpg" class="ui small circular image">
+					  	<h3 class="ui center aligned image header">
+							Basketball
+						</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<div id="speak" class="ui container">
+			<h1 class="ui center aligned header">
+				I Speak...
+			</h1>
+		</div>
+		<div class="ui container">
+			<div class="ui stackable three column centered grid">
+				<div class="row">
+					<div class="column">
+						<img src="images/flags/cr.jpg" class="ui small circular image">
+					  	<h3 class="ui center aligned image header">
+							Spanish
+						</h3>
+					</div>
+					<div class="column">
+						<img src="images/flags/us.png" class="ui small circular image">
+					  	<h3 class="ui center aligned image header">
+							English
+						</h3>
+					</div>
+					<div class="column">
+						<img src="images/flags/br.png" class="ui small circular image">
+					  	<h3 class="ui center aligned image header">
+							Portuguese
+						</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="need">
+		<div class="ui container">
+			<a href="JavaScript:void(0);" class="next">
+				<div class="ui text shape">
+					<div class="sides">
+						<div class="ui basic segment side active">
+							<div>
+								Do you need a <b>musician</b>?
+							</div>
+							<p>
+								I love playing guitar, but can also play bass or percussion. Is it a paid gig or do you want to jam hit me up below. Either way music is my passion I will probably say yes.
+							</p>
+						</div>
+
+						<div class="ui basic segment side">
+							<div>
+								Do you need a <b>web+app developer</b>?
+							</div>
+							<p>					
+								I have helped plenty of clients before, and am excited to find a way to help you. I am a capable developer that enjoys helping you succeed, more of a mix between an advisor and developer, an aDEVisor :).
+							</p>
+						</div>
+
+						<div class="ui basic segment side">
+							<div>
+								Do you need a <b>teacher</b>?
+							</div>
+							<p>			
+								I love teaching formally or informally, if you want to learn more about something I have mentioned on my site just hit me up more than happy to share what I know.
+							</p>
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>		
+	</section>
+
+
+	<section id="contact">
+		<div class="ui container">
+			<div class="ui stackable two column grid">
+				<div class="column">
+					<h1 class="ui header">
+						Let's Talk
+					</h1>
+					<div class="ui form">
+						<form method="post" action="contact" name="contactForm">
+							<input type="hidden" name="action" value="contact">
+							<div class="required field {{#if validationErrors.name}}error{{/if}}">
+								<label>Name</label>
+								<input type="text" name="name.full" value="{{formData.[name.full]}}"/>
+							</div>
+							<div class="required field {{#if validationErrors.email}}error{{/if}}">
+								<label>Email</label>
+								<input type="email" name="email" value="{{formData.email}}"/>
+							</div>
+							<div class="field">
+								<label>Phone</label>
+								<input type="text" name="phone" value="{{formData.phone}}"/>
+							</div>
+							<div class="required field {{#if validationErrors.enquiryType}}error{{/if}}">
+								<label>Subject</label>
+								<div class="ui selection dropdown">
+									<input type="hidden" name="enquiryType" value="{{formData.enquiryType}}">
+									<i class="dropdown icon"></i>
+									<div class="default text">test</div>
+									<div class="menu">
+										{{#each enquiryTypes}}
+											<div class="item" data-value="{{value}}">{{label}}</div>
+										{{/each}}
+									</div>
+								</div>
+							</div>
+							<div class="required field {{#if validationErrors.message}}error{{/if}}">
+								<label>Message</label>
+								<textarea name="message" rows="2">{{formData.message}}</textarea>
+							</div>
+							<div class="field {{#if validationErrors.robot}}error{{/if}}">
+								<label>5 plus 3?</label>
+								<input type="text" name="robot" value="{{formData.robot}}"/>
+							</div>
+							<input type="hidden" name="return" value="index"/>
+							<div class="ui submit button">Send</div>
+						</form>
+					</div>
+				</div>
+				<div class="column">
+					<h1 class="ui header">
+						Reach Out
+					</h1>
+					<div class="ui basic left aligned segment">
+						<a href="https://twitter.com/jprampra">
+							<i class="twitter icon"></i>
+							@jprampra
+						</a>
+						<a href="https://github.com/jpramirezpra">
+							<i class="github icon"></i>
+							jpramirezpra
+						</a>
+						<a href="www.linkedin.com/in/jprampra">
+							<i class="linkedin icon"></i>
+							in/jprampra
+						</a>
+						<a href="https://www.facebook.com/jose.ramirezpradilla">
+							<i class="facebook icon"></i>
+							Jose Pablo Ramirez Pradilla
+						</a>
+						<a href="/documents/jprpresume.pdf">
+							<i class="file text outline icon"></i>
+							Resume
+						</a>
+					</div>
+					<div class="ui basic right aligned segment loc">Current Location:</div>
+					<iframe
+					  width="100%"
+					  height="270em"
+					  frameborder="0" style="border:0"
+					  src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAT17T4MHQOLol1hfynFuRIyLo1blLy_1A
+					    &location=29.762354,-95.373082
+					    &heading=140
+					    &pitch=15
+					    &fov=70" allowfullscreen>
+					</iframe>
+				</div>
+			</div>
+		</div>
+	</section>
 </div>

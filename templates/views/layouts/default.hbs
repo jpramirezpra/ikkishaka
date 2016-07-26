@@ -6,87 +6,91 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>jprampra</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link href="/public/semantic.min.css" rel="stylesheet">
 		<link href="/styles/site.min.css" rel="stylesheet">
-		
-		{{!-- This file provides the default styling for the KeystoneJS Content Editor 
+
+		{{!-- This file provides the default styling for the KeystoneJS Content Editor
 			- only renders when user is logged in and admin--}}
 		{{{isAdminEditorCSS user}}}
-		
+
 		{{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
 		//- Safely remove this block if you are not targeting IE8 --}}
 		<!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" />
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" />
 		<![endif]-->
-		
+
 	</head>
 	<body>
 		<div id="header">
-			<div class="container">
-				<div role="navigation" class="navbar navbar-default">
-					<div class="container-fluid">
-						<div class="navbar-header">
-							<button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-							</button>
-							<a href="/" class="navbar-brand">jprampra</a>
+			<div class="ui container">
+				<div class="ui secondary borderless fixed menu">
+					<div class="item">
+						<h1 class="ui header">
+						  <img class="ui image" src="/images/Logo-mini.png">
+						  <div class="content">
+						    JPRP
+						  </div>
+						</h1>
+					</div>
+
+<!-- 					<div class="item">
+						<div class="ui image">
+							<img src="images/Logo-mini.png">
 						</div>
-						<div class="collapse navbar-collapse">
-							<ul class="nav navbar-nav navbar-left">
-									{{# each navLinks}}
-									<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
-										<a href="{{ href }}">{{ label }}</a>
-									</li>
-								{{/each}}
-							</ul>
-							<ul class="nav navbar-nav navbar-right">
-								{{#if user}}
-								<li><a href="/keystone/signout">Sign Out</a></li>
-								{{else}}
-								<li><a href="/keystone/signin">Sign In</a></li>
-								{{/if}}
-							</ul>
-						</div>
+					</div>
+					<div class="item">
+						<h1>JPRP</h1>
+					</div> -->
+
+					<div class="right menu">
+						<a href="/Project" class="ui item">Projects</a>
+						<a href="/Blog" class="ui item">Blog</a>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div id="body">
-			<!--
-				Flash messages allow you to display once-off status messages to users, e.g. form
-				validation errors, success messages, etc
-			-->
-			{{#if messages}}
-			<div id="flash-messages" class="container">
-				{{#if messages.info}}
-				<div class="alert alert-info">
-						{{{flashMessages messages.info}}}
-				</div>
-				{{/if}}
-				{{#if messages.success}}
-				<div class="alert alert-success">
-						{{{flashMessages messages.success}}}
-				</div>
-				{{/if}}
-				{{#if messages.warning}}
-				<div class="alert alert-warning">
-						{{{flashMessages messages.warning}}}
-				</div>
-				{{/if}}
-				{{#if messages.error}}
-				<div class="alert alert-danger">
-						{{{flashMessages messages.error}}}
-				</div>
-				{{/if}}
-			</div>
-			{{/if}}
 			<!-- The content block should contain the body of your template's content-->
 			{{{body}}}
 		</div>
-		<div class="container">
-			<div id="footer">
-				<p>Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.</p>
+		<div id="footer">
+			<div class="ui container">
+				<div class="ui grid">
+					<div class="four row column">
+						<div class="left floated left aligned column">
+							<a class="face" href="https://www.facebook.com/jose.ramirezpradilla">
+								<i class="facebook icon"></i>
+							</a>
+							<a class="git" href="https://github.com/jpramirezpra">
+								<i class="github icon"></i>
+							</a>
+							<a class="twitter" href="https://twitter.com/jprampra">
+								<i class="twitter icon"></i>
+							</a>
+							<a class="linked" href="www.linkedin.com/in/jprampra">
+								<i class="linkedin icon"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</ul>
+
+			<div class="ui grid" id="bottom-footer">
+				<div class="four column row">
+					<div class="left floated left aligned column">
+						<p>Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.</p>
+					</div>
+					<div class="right floated right aligned column">
+						{{#if user}}
+							<a href="/keystone/signout">Sign Out</a>
+						{{else}}
+							<a href="/keystone/signin">Sign In</a>
+						{{/if}}
+					</div>
+				</div>
+				</ul>
+			</div>
 			</div>
 		</div>
 		{{!--
@@ -99,7 +103,8 @@
 			//- Customise which Bootstrap javascript files are served by including
 			//- them specifically here, instead of bootstrap-3.2.0.min.js
 		--}}
-		<script src="/js/lib/bootstrap/bootstrap-3.2.0.min.js"></script>
+		<script src="/public/semantic.min.js"></script>
+		<script src="/js/index.js"></script>
 		{{{isAdminEditorJS user}}}
 	</body>
 </html>
